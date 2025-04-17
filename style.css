@@ -1,0 +1,88 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+ }
+
+.title{
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    margin-top: 20px;
+    font-family:Helvetica, sans-serif;
+    font-weight: bold;
+    background-color: #526f18;
+    padding: 20px;
+    color: white;
+}
+
+.description{
+    margin: 15px 20px;
+    text-align: center;
+    font-family:Helvetica, sans-serif;
+    font-size:16px;
+    line-height: 1.5;
+}
+
+.ActionButtons{
+    font-family: HELVETICA, sans-serif;
+    display: flex;
+    gap: 10px;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.Start, .Restart, .EndGame{
+    padding: 12px;
+    background-color: #526f18;
+    color: white;
+    font-size: 16px;
+    border: none;
+}
+
+.Start:hover, .Restart:hover, .EndGame:hover{
+    background-color: #80b534;
+    cursor: pointer;
+}
+
+.divider{
+    background-color: #526f18;
+    padding: 2px;
+    margin:20px 20px;
+    border-radius: 5px;
+}
+
+.cardGrid{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: Center;
+    font-size:30px;
+
+}
+
+.cardGridDescription{
+    margin: -5px 30px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.container{
+    margin: 30px 20px;
+    display:grid;
+    grid-template-columns: repeat(4, 150px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.container p{
+    font-size: 12px;
+    text-align: center;
+    background-color: #526f18;
+    color:white;
+}
+
+.container div:hover{
+    background-color: #80b534;
+    cursor: pointer;
+    padding:5px;
+}
