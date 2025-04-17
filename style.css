@@ -1,88 +1,131 @@
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     font-family: Helvetica, sans-serif;
- }
-
-.title{
+  }
+  
+  .title {
     text-align: center;
     font-size: 30px;
-    color: #000000;
+    color: white;
     margin-top: 20px;
-    font-family:Helvetica, sans-serif;
     font-weight: bold;
     background-color: #526f18;
     padding: 20px;
-    color: white;
-}
-
-.description{
+  }
+  
+  .description {
     margin: 15px 20px;
     text-align: center;
-    font-family:Helvetica, sans-serif;
-    font-size:16px;
+    font-size: 16px;
     line-height: 1.5;
-}
-
-.ActionButtons{
-    font-family: HELVETICA, sans-serif;
+  }
+  
+  .ActionButtons {
     display: flex;
     gap: 10px;
-    border-radius: 5px;
     justify-content: center;
-}
-
-.Start, .Restart, .EndGame{
+    margin: 10px 0;
+  }
+  
+  .Start, .Restart, .EndGame {
     padding: 12px;
     background-color: #526f18;
     color: white;
     font-size: 16px;
     border: none;
-}
-
-.Start:hover, .Restart:hover, .EndGame:hover{
+    border-radius: 5px;
+  }
+  
+  .Start:hover, .Restart:hover, .EndGame:hover {
     background-color: #80b534;
     cursor: pointer;
-}
-
-.divider{
+  }
+  
+  .divider {
     background-color: #526f18;
     padding: 2px;
-    margin:20px 20px;
+    margin: 20px 20px;
     border-radius: 5px;
-}
-
-.cardGrid{
+  }
+  
+  .cardGrid {
     margin-top: 20px;
     margin-bottom: 10px;
-    text-align: Center;
-    font-size:30px;
-
-}
-
-.cardGridDescription{
-    margin: -5px 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  .cardGridDescription {
+    margin: -5px 30px 20px 30px;
     text-align: center;
     font-size: 12px;
-}
-
-.container{
-    margin: 30px 20px;
-    display:grid;
+  }
+  
+  .container {
+    margin: 0 auto 30px;
+    display: grid;
     grid-template-columns: repeat(4, 150px);
     justify-content: center;
     gap: 10px;
-}
-
-.container p{
+  }
+  
+  .container p {
     font-size: 12px;
     text-align: center;
     background-color: #526f18;
-    color:white;
-}
-
-.container div:hover{
-    background-color: #80b534;
+    color: white;
+    padding: 5px;
+  }
+  
+  /* Card flip styling */
+  .card {
+    position: relative;
+    width: 150px;
+    height: 230px;
+    perspective: 1000px;
     cursor: pointer;
-    padding:5px;
-}
+  }
+  
+  .card img.front {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    backface-visibility: hidden;
+  }
+  
+  .card .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 230px;
+    background-color: #80b534;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+  }
+  
+  .card.flipped img.front {
+    visibility: hidden;
+  }
+  
+  .card.flipped .back {
+    transform: rotateY(0deg);
+  }
+  
+  .card .back, .card img.front {
+    transition: transform 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .card.matched {
+    background-color: lightgreen !important;
+    color: white;
+  }
+  
